@@ -10,3 +10,6 @@ function App() {
 }
 
 export default App;
+
+
+//Components - class(class based components) , functions(function based components)
