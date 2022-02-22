@@ -8,8 +8,8 @@ function App() {
   return (
     <div className="App">
       
-    <Component1 />
-    <Component2 />
+    <Component1 heading='1111111' />
+    <Component2 heading='2' />
     {/* <Component2 /> */}
     </div>
   );
