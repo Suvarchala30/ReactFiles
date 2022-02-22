@@ -1,5 +1,5 @@
 import React from "react";//This is optional in function based components
-import Developer from "./Developer";
+import Developer from "./Developer/Developer";
 import './Component1.css'
 function Component1(){
     return (
