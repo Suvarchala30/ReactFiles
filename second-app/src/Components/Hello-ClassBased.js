@@ -15,7 +15,7 @@ class HelloClass extends Component{
               greetTo:'India',
               greetAlsoTo:'Vizag'
           })
-        console.log('Iam changed greet')
+        console.log(this.state.greetAlsoTo)
       }
     render(){
        // console.log(this.props)

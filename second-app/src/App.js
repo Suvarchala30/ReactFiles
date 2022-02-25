@@ -2,7 +2,9 @@ import React from "react";
 import "./App.css";
 //import React, {Component} from 'react';
 //import Hello from './Components/Hello';
-import HelloClassBased from "./Components/Hello-ClassBased";
+//import HelloClassBased from "./Components/Hello-ClassBased";
+//import CounterClass from "./Components/CounterClass"
+import CollegeStudents from "./Components/CollegeStudents"
 
 // function App() {
 //   return (
@@ -20,15 +22,14 @@ import HelloClassBased from "./Components/Hello-ClassBased";
 
 //class App extends Component{
 class App extends React.Component {
-  constructor(props){
-    super(props)
-    //console.log(this.props)
-  }
+  
   render() {
     return (
       <div className="App">
-        <HelloClassBased />
-        {/* <HelloClassBased greetTo="Africa!" />
+        <CollegeStudents />
+       {/*  <CounterClass />
+       <HelloClassBased />
+         <HelloClassBased greetTo="Africa!" />
         <HelloClassBased greetTo="Canada!" /> */}
       </div>
     );
