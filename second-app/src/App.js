@@ -1,10 +1,12 @@
 import React from "react";
 import "./App.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 //import React, {Component} from 'react';
 //import Hello from './Components/Hello';
 //import HelloClassBased from "./Components/Hello-ClassBased";
 //import CounterClass from "./Components/CounterClass"
-import CollegeStudents from "./Components/CollegeStudents"
+//import CollegeStudents from "./Components/CollegeStudents"
+import BootstrapButton from "./Components/BootstrapBasics";
 
 // function App() {
 //   return (
@@ -26,8 +28,9 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <CollegeStudents />
-       {/*  <CounterClass />
+        <BootstrapButton />
+       {/*  <CollegeStudents />
+        <CounterClass />
        <HelloClassBased />
          <HelloClassBased greetTo="Africa!" />
         <HelloClassBased greetTo="Canada!" /> */}
