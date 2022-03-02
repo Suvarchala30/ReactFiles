@@ -1,5 +1,5 @@
 import React from "react";
-import "./Products.css"
+//import "./Products.css"
 import {Card,Button,Container,Row,Col} from "react-bootstrap"
 import LaptopImage from "../assets/laptop1.jpeg"
 function Products(){
