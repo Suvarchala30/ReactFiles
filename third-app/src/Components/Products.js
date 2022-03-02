@@ -11,13 +11,13 @@ function Products(){
             
         },
         {
-            id:1,
+            id:2,
             title:'Laptop2',
             description: 'Some quick example text to build on the card title and make up the bulk of the cards content'
            
         },
         {
-            id:1,
+            id:3,
             title:'Laptop3',
             description: 'Some quick example text to build on the card title and make up the bulk of the cards content'
             
