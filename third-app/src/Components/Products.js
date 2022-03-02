@@ -30,14 +30,14 @@ function Products(){
                     {cardData.map(product =>(
 
                         <Col md={4} key={product.id}>
-                           <Card style={{ width: '18rem' }}>
+                           <Card>
   <Card.Img variant="top" src={LaptopImage} />
   <Card.Body>
     <Card.Title>{product.title}</Card.Title>
     <Card.Text>
         {product.description}
     </Card.Text>
-    <Button variant="primary">Go somewhere</Button>
+    <Button variant="primary">Buy</Button>
   </Card.Body>
 </Card> 
 </Col>
