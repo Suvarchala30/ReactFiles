@@ -28,7 +28,7 @@ class App extends React.Component {
         <br /> */}
         <Button variant="success" className="show-button" onClick={this.showProducts}>
           {this.state.show ? 'Hide' : 'Show'} Products</Button>
-        {this.state.show && <Reviews />}
+        {this.state.show && <Reviews />} 
       </div>
     );
   }
@@ -36,3 +36,4 @@ class App extends React.Component {
 }
 
 export default App;
+//Conditional rendering : &&
