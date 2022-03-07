@@ -3,6 +3,7 @@ import './App.css';
 import TableComponent from "./Components/TableComponent"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Container,Button, ProgressBar} from "react-bootstrap"
+import IncrementButton from "./Components/Buttons"
 
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
      {show &&  <TableComponent />}
     <Button variant="dark" onClick={()=>setShow(!show)}>{show ? 'Hide' : 'Show'}</Button>
     <ProgressBar now={counter} />
-    <Button onClick={()=>setCounter(counter+1)} variant="dark">Increment</Button>
+    <IncrementButton counter={counter} setCounter={setCounter} />
     </Container>
   );
 }
