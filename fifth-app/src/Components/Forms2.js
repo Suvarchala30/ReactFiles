@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const Forms2=()=>{
     const [slider,setslider]=useState('')
     useEffect(()=>{
-        console.log(setslider)
+        console.log(slider)
     },[slider])
     return(
     <Form  style={{width: '30%', margin: '50px auto'}}>
