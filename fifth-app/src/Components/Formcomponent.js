@@ -27,11 +27,16 @@ function Formcomponent(){
     </Form.Text>
   </Form.Group>
 
+
+
   <Form.Group className="mb-3" controlId="formBasicPassword">
     <Form.Label>Password</Form.Label>
     <Form.Control type="password" placeholder="Password" onChange={(e) => setlogindetails({...logindetails, password:e.target.value})
     }/>
   </Form.Group>
+
+
+
   <Form.Group className="mb-3" controlId="formBasicCheckbox">
     <Form.Check type="checkbox" label="I agree with the terms and conditions" checked={logindetails.isChecked} onChange={(e)=>setlogindetails({...logindetails,isChecked:e.target.checked})} />
   </Form.Group>
