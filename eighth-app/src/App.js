@@ -6,6 +6,7 @@ import Navbar from "./Components/Navbar"
 import Login from './Components/Login';
 import AboutUs from './Components/AboutUs';
 import Post2 from "./Components/Post2"
+import Page404 from './Components/Page404';
 import {
   BrowserRouter as R1,
   Routes,
@@ -24,6 +25,7 @@ function App() {
     <Route path="/aboutus" element={<AboutUs />} />
     <Route path="/posts" element={<Posts />} />
     <Route path="/post2/:id" element={<Post2 />} />
+    <Route path="*" element={<Page404 />} />
     </Routes>
     </Container>
     </R1>

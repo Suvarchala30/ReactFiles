@@ -3,6 +3,7 @@ import {Card,Button,Spinner} from "react-bootstrap"
 import "./Posts.css"
 import axios from 'axios'
 import {useParams} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 function Posts(){
     const [post,setPost] = useState({})
@@ -20,12 +21,14 @@ function Posts(){
         }
     }
     fetchPost()
-    },[])
+    },[id])
 
     return(
         <>
+        <div className="back-link">
+<Link className="route-link" to="/">Back</Link></div>
         <h1>Post no. {post.id}</h1>    
-        {Object.keys(post) ? (
+        {Object.keys(post).length ? (
             
         <Card className="mypost" border="primary" bg="dark" text="light" key={post.id}>
         <Card.Header>User {post.userId}</Card.Header>
