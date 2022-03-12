@@ -7,6 +7,8 @@ import Login from './Components/Login';
 import AboutUs from './Components/AboutUs';
 import Post2 from "./Components/Post2"
 import Page404 from './Components/Page404';
+import Contact from './Components/Contact';
+import HOC from './Components/HOC';
 import {
   BrowserRouter as R1,
   Routes,
@@ -22,9 +24,10 @@ function App() {
   <Link to='/posts'>Posts</Link> */}
     <Routes>
     <Route path="/" element={<Login />}/>
-    <Route path="/aboutus" element={<AboutUs />} />
+    <Route path="/aboutus" element={< HOC component={AboutUs} />} />
     <Route path="/posts" element={<Posts />} />
     <Route path="/post2/:id" element={<Post2 />} />
+    <Route path="/contact" element={<HOC component={Contact} />} />
     <Route path="*" element={<Page404 />} />
     </Routes>
     </Container>

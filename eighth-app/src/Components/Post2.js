@@ -6,7 +6,7 @@ import {useParams} from 'react-router-dom'
 import { Link } from 'react-router-dom'
 
 function Posts(){
-    const [post,setPost] = useState({})
+    const [post,setPost] = useState('')
 
     const {id}=useParams()
 
@@ -17,6 +17,7 @@ function Posts(){
             const res=await axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`)
             setPost(res.data)
         }catch(err){
+            setPost({})
             console.log(err)
         }
     }
@@ -27,9 +28,11 @@ function Posts(){
         <>
         <div className="back-link">
 <Link className="route-link" to="/">Back</Link></div>
-        <h1>Post no. {post.id}</h1>    
-        {Object.keys(post).length ? (
-            
+          
+        {post ? (
+        Object.keys(post).length ? (
+            <>
+            <h1>Post no. {post.id}</h1>  
         <Card className="mypost" border="primary" bg="dark" text="light" key={post.id}>
         <Card.Header>User {post.userId}</Card.Header>
   <Card.Body>
@@ -44,11 +47,14 @@ function Posts(){
       <small className="text-muted">Uploaded {Math.floor(Math.random()*60)} mins ago</small>
     </Card.Footer>
 </Card>
-
+</>
  
-):
+) : (
+<h1>This post does not exist</h1>
+)
+) :(
 <Spinner animation="border" />
-}
+)}
         </>
     )
 }
