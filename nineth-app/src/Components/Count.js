@@ -52,7 +52,8 @@ const Count=(props)=>{
 
 const mapStateToProps = (state)=>{
     return{
-        count:state.count
+        //count:state.count
+        count:state.count.count
     }
 }
 
