@@ -1,31 +1,22 @@
-import React, { useState,useEffect } from "react";
+import React, { useEffect } from "react";
 import {Card,Button,Spinner} from "react-bootstrap"
 import "./Posts.css"
-import axios from 'axios'
-
+import { connect } from "react-redux"
 import { Link } from 'react-router-dom'
+import {fetchPosts} from "../redux/actions"
 
-function Posts(){
-    const [posts,setPosts] = useState([])
-
-    useEffect(async ()=>{
-
-        try{
-            const res=await axios.get('https://jsonplaceholder.typicode.com/posts')
-            setPosts(res.data)
-        }catch(err){
-            console.log(err)
-        }
+function Posts(props){
+    useEffect(()=>{
+        props.fetchPosts()
     },[])
-
     return(
         <>
 <div className="back-link">
 <Link className="route-link" to="/">Back</Link></div>
+<h1>Posts</h1>
 
-
-        {posts.length ? 
-            posts.map((post) => (
+        {!props.loading ? (
+            props.posts.map((post) => (
                 
         <Card className="mypost" border="primary" bg="dark" text="light" key={post.id}>
 
@@ -43,11 +34,27 @@ function Posts(){
     </Card.Footer>
 </Card>
 
-            )) 
-            : <Spinner animation="border" />
+            )) )
+            : <Spinner animation="border" /> 
 }
         </>
     )
 }
 
-export default Posts
+
+const mapStateToProps = (state)=>{
+    return{
+        posts:state.posts.posts,
+        error:state.posts.error,
+        loading:state.posts.loading
+    }
+}
+
+
+const mapDispatchToProps = (dispatch)=>{
+    return{
+        fetchPost:()=>dispatch(fetchPosts()),
+        
+    }
+}
+export default connect(mapStateToProps,mapDispatchToProps)(Posts)
